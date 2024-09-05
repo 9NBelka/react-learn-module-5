@@ -16,7 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/payments" element={<PaymentsPage />}/>
-        <Route path="/payments/:paymentId" element={<PaymentDetailsPage />}/>
+        <Route path="/payments/:paymentId" element={<PaymentDetailsPage />}>
+          <Route path='subpage-a' element={<div>Subpage A</div>}/>
+          <Route path='subpage-b' element={<div>Subpage B</div>}/>
+        </Route>
         <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </>
