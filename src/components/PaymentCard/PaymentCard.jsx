@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function PaymentCard({payment}) {
@@ -5,7 +6,7 @@ export default function PaymentCard({payment}) {
   <div>
     <p>Amount: {payment.amount}</p>
     <p>Description: {payment.description}</p>
-    <div>Details</div>
+    <Link to={`/payments/${payment.id}`}>Details</Link>
   </div>
   )
 }
