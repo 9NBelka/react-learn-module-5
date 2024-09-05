@@ -5,17 +5,18 @@ import Navigation from '../Navigation/Navigation'
 import HomePage from '../../pages/HomePage/HomePage'
 import PaymentsPage from '../../pages/PaymentsPage/PaymentsPage'
 import NotFoundPage from '../../pages/NotFoundPage.jsx/NotFoundPage'
+import PaymentDetailsPage from '../../pages/PaymentDetailsPage/PaymentDetailsPage'
 function App() {
 
 
   return ( 
     <>
-      <h1>React Router</h1>
       <Navigation />
 
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/payments" element={<PaymentsPage />}/>
+        <Route path="/payments/:paimentId" element={<PaymentDetailsPage />}/>
         <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </>
