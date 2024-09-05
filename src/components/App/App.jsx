@@ -2,6 +2,9 @@
 
 import { Route, Routes } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
+import HomePage from '../../pages/HomePage/HomePage'
+import PaymentsPage from '../../pages/PaymentsPage/PaymentsPage'
+import NotFoundPage from '../../pages/NotFoundPage.jsx/NotFoundPage'
 function App() {
 
 
@@ -11,8 +14,9 @@ function App() {
       <Navigation />
 
       <Routes>
-        <Route path="/" element={<div>Home page</div>}/>
-        <Route path="/payments" element={<div>Payments page</div>}/>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/payments" element={<PaymentsPage />}/>
+        <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </>
   )
